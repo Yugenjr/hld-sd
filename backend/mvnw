@@ -1,0 +1,12 @@
+#!/bin/sh
+# Maven wrapper runner for Linux / macOS / CI
+if command -v mvn >/dev/null 2>&1; then
+  exec mvn "$@"
+fi
+
+if [ -f "$HOME/.m2/wrapper/dists/apache-maven-*/bin/mvn" ]; then
+  exec "$HOME"/.m2/wrapper/dists/apache-maven-*/bin/mvn "$@"
+fi
+
+echo "ERROR: Maven not found on PATH." >&2
+exit 1
