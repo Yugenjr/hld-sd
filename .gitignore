@@ -4,8 +4,6 @@ Thumbs.db
 desktop.ini
 
 # Environment and Secret files
-.env
-.env.local
 .env.*.local
 *.pem
 *.key
@@ -40,7 +38,6 @@ pnpm-debug.log*
 # IDE & Editor files
 .idea/
 *.iml
-.vscode/
 *.suo
 *.ntvs*
 *.njsproj
@@ -55,3 +52,5 @@ test-results/
 # Docker volumes / local data
 data/
 pgdata/
+config.bat
+node_modules
